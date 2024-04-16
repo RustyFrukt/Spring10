@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашнее задание 7</title>
+    <link href="./styles/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+</head>
+
+<body>
+<div>
+    <div class="center">
+        <div class="header">
+            <a href="./books">Главная</a>
+            <a href="./books">Каталог книг</a>
+            <a href="./reader">Читатели</a>
+            <a href="./issues">Список выдачи книг</a>
+            <h1>Книги, имеющиеся в библиотеке</h1><br>
+        </div>
+    </div>
+    <div class="top">
+        <ul>
+            <li th:each="book : ${books}" th:text="${book.toString()}"></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
